@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desenvolvimento Sustentável</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+      
+      /* Fundo com imagem de folha opaca */
+      background-image: url('https://images.unsplash.com/photo-1549419137-023a1a3641a9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-attachment: fixed; /* Opcional: mantém a imagem no lugar ao rolar */
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      /* Sobreposição para deixar a imagem opaca e escura */
+      position: relative;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5fff5; /* cor de fundo original */
+      opacity: 0.8; /* Ajusta a opacidade (0.0 a 1.0) */
+      z-index: -1;
+    }
+
+    h1 {
+      color: green;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00cc00; /* brilho verde */
+      margin-top: 20px;
+      font-size: 36px;
+    }
+
+    .arvore {
+      position: absolute;
+      right: 35px;
+      top: 100px;
+      width: 225px;
+      opacity: 0;
+      animation: aparecer 3s forwards;
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: flex-start; /* Alinha os itens para a esquerda */
+      align-items: center;
+      gap: 40px;
+      margin-top: 80px;
+      margin-left: 20%; /* Move o container um pouco para a esquerda */
+    }
+
+    .botao {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #013220; /* verde escuro */
+      color: white; /* fonte branca */
+      font-size: 18px;
+      font-weight: bold;
+      border: 5px solid #228b22; /* verde folha */
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      background-image: url("https://png.pngtree.com/png-clipart/20210311/original/pngtree-green-leaf-frame-png-image_6056061.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .botao:hover {
+      background-color: #32cd32; /* verde claro */
+      color: black; /* fonte preta */
+      transform: scale(1.1);
+    }
+
+    .video-section {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    video {
+      width: 800px;
+      max-width: 90%; /* pra celular */
+      border: 2px solid green;
+      border-radius: 10px;
+    }
+
+    .explicacao {
+      max-width: 400px;
+      text-align: left;
+      font-size: 18px;
+      color: #013220;
+    }
+  </style>
+</head>
+<body>
+  <h1>Desenvolvimento Sustentável</h1>
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxNRzXE8WJsESYtPmVQCgDly__jK0W9jJfF3wKRVK3Y_xDxJ9o1ECv_imG&s=10" alt="Árvore" class="arvore">
+
+  <div class="container">
+    <a href="ambiental.html" class="botao">Ambiental</a>
+    <a href="social.html" class="botao">Social</a>
+    <a href="economico.html" class="botao">Econômico</a>
+  </div>
+
+  <div class="video-section">
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+    <div class="explicacao">
+      <h2>Introdução</h2>
+      <p>O desenvolvimento sustentável busca equilibrar três pilares fundamentais: o <b>ambiental</b>, o <b>social</b> e o <b>econômico</b>. Ao assistir o vídeo ao lado, você terá uma visão geral de como essas dimensões se conectam para promover um futuro mais justo e equilibrado.</p>
+    </div>
+  </div>
+</body>
+</html>
